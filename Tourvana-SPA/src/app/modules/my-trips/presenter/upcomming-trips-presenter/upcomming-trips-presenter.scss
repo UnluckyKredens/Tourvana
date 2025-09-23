@@ -1,0 +1,69 @@
+    .container {
+      overflow-x: auto;
+      height: 25vh;
+      display: flex;
+      flex-direction: row;
+      // align-items: center;
+      padding: 1% 2%;
+
+      .new {
+        width: 300px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: flex-start;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: #7f7e7e34;
+        margin: 0 1%;
+
+
+        &__icon {
+          width: 96px;
+          height: 96px;
+        }
+      }
+
+      .new:hover {
+        animation: onHover 500ms forwards;
+      }
+
+      .trip {
+        background-color: #ffffff00;
+        width: 300px;
+        height: 200px;
+
+        &__image {
+          padding: 2%;
+          width: 100%;
+          height: 75%;
+          border-radius: 15px;
+        }
+
+        &__title {
+          font-weight: 100;
+          font-size: 22px;
+          align-self: flex-start;
+          margin: 0;
+        }
+
+        &__date {
+          font-size: 14px;
+          font-weight: 100;
+          color: #7F7E7E;
+          align-self: flex-start;
+          margin: 0%;
+        }
+
+      }
+    }
+
+    @keyframes onHover {
+        0% {
+
+        }
+        100% {
+                  transform: scale(1.05);  
+        }
+    }

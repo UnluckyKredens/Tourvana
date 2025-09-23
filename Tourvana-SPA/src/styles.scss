@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap');
+html, body { height: 100%; }
+body { margin: 0;padding: 0; font-family: 'Jura', sans-serif; }
+
+.white-outline-formfield .mat-mdc-form-field-outline-start,
+.white-outline-formfield .mat-mdc-form-field-outline-end,
+.white-outline-formfield .mat-mdc-form-field .mdc-notched-outline {
+  border-color: white !important;
+}
+
+.white-outline-formfield .mat-mdc-form-field-label {
+  color: white !important;
+}
+
+.white-outline-formfield .mat-mdc-input-element {
+  color: white !important;
+}
+
+.white-outline-formfield .mat-mdc-form-field-infix {
+  color: white !important;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

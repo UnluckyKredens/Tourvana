@@ -1,0 +1,39 @@
+<div class="navigation">
+  <div class="navigation__logo">
+    <img src="images/Logos/Tourvana-Black.png" alt="Tourvana logo"  [routerLink]="'/'"/>
+  </div>
+
+  <!-- BURGER ICON -->
+  <div class="navigation__burger" (click)="toggleMenu()" *ngIf="!menuOpen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- DESKTOP MENU -->
+  <div class="navigation__desktop">
+    <button mat-button>Articles</button>
+    <button mat-button [routerLink]="['/trips']">Trips</button>
+    <button mat-button (click)="goToAbout()">About</button>
+    @if(authService.userToken == undefined) {
+    <button mat-raised-button color="primary" [routerLink]="'/auth'">Login</button>
+    <button mat-raised-button [routerLink]="['/auth/register']">Register</button>
+    }
+    @else {
+      <img class="navigation__desktop--user" src="/images/Icons/user.png">
+    }
+
+  </div>
+
+  <!-- MOBILE OVERLAY MENU -->
+  <div class="navigation__overlay" [class.active]="menuOpen">
+    <!-- Close icon (✕) inside overlay -->
+    <div class="overlay__close" (click)="toggleMenu ()">✕</div>
+
+    <button mat-button (click)="toggleMenu ()">Articles</button>
+    <button mat-button (click)="toggleMenu ()">Trips</button>
+    <button mat-button (click)="toggleMenu ()">About</button>
+    <button mat-raised-button color="primary" (click)="toggleMenu ()" [routerLink]="'/auth'">Login</button>
+    <button mat-raised-button (click)="toggleMenu ()" [routerLink]="['/auth/register']">Register</button>
+  </div>
+</div>

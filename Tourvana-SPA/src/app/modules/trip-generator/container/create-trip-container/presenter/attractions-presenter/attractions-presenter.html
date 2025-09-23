@@ -1,0 +1,17 @@
+<div class="container">
+
+  <div class="list">
+    @for(attraction of attractions; track attraction.name; let index = $index ) {
+    <div class="attraction">
+      <div class="attraction__about">
+        <p class="attraction__about--name">{{attraction.name}}</p>
+        <p class="attraction__about--description">{{attraction.description}}</p>
+        <p class="attraction__about--price">{{attraction.price}} zł</p>
+        <a class="attraction__about--info">More info</a>
+      </div>
+      <mat-checkbox color="primary" class="attraction__check" [checked]="isChecked(attraction.url)" (change)="toggleAttraction(attraction, $event.checked)"></mat-checkbox> <!-- [(ngModel)]="" !-->
+
+    </div>
+    }
+  </div>
+</div>

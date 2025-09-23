@@ -1,0 +1,18 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="create">
+  <router-outlet></router-outlet>
+  <div class="create__options">
+    <ol class="stepper">
+        <li class="stepper__item" [routerLink]="['/trip/generator/data']" isActive="false"  routerLinkActive="stepper__item--active" [skipLocationChange]="true"   (click)="$event.stopImmediatePropagation()"><h3>1</h3></li>
+        <li class="stepper__item" [routerLink]="['/trip/generator/hotel']" routerLinkActive="stepper__item--active"><h3>2</h3></li>
+        <li class="stepper__item" [routerLink]="['/trip/generator/attractions']" routerLinkActive="stepper__item--active"><h3>3</h3></li>
+        <li class="stepper__item last" routerLink="['/trip/generator/summary']" routerLinkActive="stepper__item--active"><h3>4</h3></li>
+    </ol>
+    <div class="create__options--actions">
+    <button mat-raised-button (click)="prevStep()">Wstecz</button>
+    <button mat-raised-button color="primary" (click)="nextStep()">Dalej</button>
+
+    </div>
+
+  </div>
+  </div>

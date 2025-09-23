@@ -1,0 +1,28 @@
+<!-- <div class="hero-section">
+  <div class="hero-overlay">
+    <h1>Explore the world without any hassle</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="where do you want to go" />
+      <button>Find</button>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="banner">
+  <div class="banner--overlay">
+    <img src="/images/landing-page.jpg" alt="Tło" class="banner--bg" />
+    
+    <div class="banner--content">
+            <h1>Zwiedzaj świat bez żadnych zmartwień</h1>
+      <div class="banner--search">
+        <mat-form-field appearance="outline" class="banner--search__formfield white-field">
+          <mat-label>Gdzie się wybierasz?</mat-label>
+          <input matInput placeholder="Wpisz miejscowość" type="text" [(ngModel)]="destination">
+        </mat-form-field>
+      <button mat-raised-button color="primary" class="banner--search__button" (click)="search()">Szukaj</button>
+      </div>
+
+    </div>
+  </div>
+</div>

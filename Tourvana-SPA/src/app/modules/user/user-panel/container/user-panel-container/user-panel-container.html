@@ -1,0 +1,33 @@
+<div class="user">
+  <div class="user__empty" *ngIf="!trips">
+    <img src="images/Icons/luggage.png" class="user__empty--icon">
+    <h2>Jeszcze nie ma żadnych podróży</h2>
+    <h3>Naciśnij walizke aby stworzyć pierwszą podróż</h3>
+  </div>
+  <h2 *ngIf="trips">Wybierz swoją podróż</h2>
+  <div class="trips" *ngIf="trips">
+    <!-- <h2>Nadchodzące podróże</h2> -->
+    <div class="trips__trip">
+      <img class="trips__trip--image" src="https://apartamentywpolsce.pl/assets/media/projekt-bez-nazwy-2_1.jpg">
+      <p class="trips__trip--title">Title</p>
+      <p class="trips__trip--date">28.05-31.05</p>
+    </div>
+
+    <div class="trips__trip">
+      <img class="trips__trip--image" src="https://apartamentywpolsce.pl/assets/media/projekt-bez-nazwy-2_1.jpg">
+      <p class="trips__trip--title">Title</p>
+      <p class="trips__trip--date">28.05-31.05</p>
+    </div>
+    <div class="trips__add">
+        <img class="" src="images/Icons/add.png">
+        <p>Dodaj nową podróż</p>
+    </div>
+  </div>
+  <div class="user__stats">
+      <h2>Ostatnie Statystyki</h2>
+        <div class="user__stats--none" *ngIf=" trips && !stats">
+            <img src="images/Icons/compass.png">
+            <h2>Nie ma jeszcze zadnych statystyk</h2>
+        </div>
+  </div>
+</div>

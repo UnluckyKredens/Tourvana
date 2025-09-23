@@ -1,0 +1,48 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="register">
+  <div class="left">
+    <h1>Zarejestruj się już teraz</h1>
+    <h2>aby odkrywać najprostsze sposoby na podróżowanie</h2>
+    <div class="socials">
+      <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" class="socials__img" alt="Facebook" />
+      <img src="https://cdn-icons-png.flaticon.com/512/179/179309.png" class="socials__img" alt="Apple" />
+      <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" class="socials__img" alt="Google" />
+    </div>
+    <div class="divider"><span>Lub</span></div>
+    <form class="form">
+      <mat-form-field appearance="fill">
+        <mat-label>Imie i Nazwisko</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Numer telefonu</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Podaj hasło</mat-label>
+        <input matInput [type]="hide() ? 'password' : 'text'" />
+        <button matIconButton matSuffix (click)="clickEvent($event)" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()">
+          <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+            <mat-form-field>
+        <mat-label>Powtórz hasło</mat-label>
+        <input matInput [type]="hide() ? 'password' : 'text'" />
+        <button matIconButton matSuffix (click)="clickEvent($event)" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()">
+          <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <button matButton="filled" color="primary">Zarejestruj się</button>
+    </form>
+  </div>
+  <div class="right">
+    <h2>Już mam konto</h2>
+    <button matButton="filled" [routerLink]="['/auth']" color="white">Zaloguj się</button>
+  </div>
+</div>

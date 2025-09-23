@@ -1,0 +1,40 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="login">
+  <div class="left">
+    <h1>Witaj ponownie!</h1>
+    <h2>Zaloguj się używając mediów społecznościowych</h2>
+    <div class="socials">
+      <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" class="socials__img" alt="Facebook" />
+      <img src="https://cdn-icons-png.flaticon.com/512/179/179309.png" class="socials__img" alt="Apple" />
+      <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" class="socials__img" alt="Google" />
+    </div>
+    <div class="divider"><span>Lub</span></div>
+    <form class="form">
+      <mat-form-field appearance="fill">
+        <mat-label>Login</mat-label>
+        <input matInput>
+      </mat-form-field>
+  <mat-form-field>
+    <mat-label>Podaj hasło</mat-label>
+    <input matInput [type]="hide() ? 'password' : 'text'" />
+    <button
+      matIconButton
+      matSuffix
+      (click)="clickEvent($event)"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide()"
+    >
+      <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+    <a class="forgot" href="google.com">Zapomniałem Hasła</a>
+    <button matButton="filled" color="primary">Zaloguj się</button>
+    </form>
+  </div>
+  <div class="right">
+        <h2>Twórz własne niezapomniane wyjazdy juz dziś</h2>
+        <h3>Samemu lub z przyjaciółmi</h3>
+            <button matButton="filled" [routerLink]="['/auth/register']" color="white">Zarejestruj się</button>
+
+  </div>
+</div>

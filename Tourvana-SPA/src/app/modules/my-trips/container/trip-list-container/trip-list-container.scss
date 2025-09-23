@@ -1,0 +1,13 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+     &__title {
+        text-align: center;
+     }
+     &__subtitle {
+        margin: 0;
+        padding: 0 3%;
+        text-align: left;
+     }
+}
