@@ -12,7 +12,7 @@
 
   <!-- DESKTOP MENU -->
   <div class="navigation__desktop">
-    <button mat-button>Articles</button>
+    <button mat-button [routerLink]="['/articles/list']">Articles</button>
     <button mat-button [routerLink]="['/trips']">Trips</button>
     <button mat-button (click)="goToAbout()">About</button>
     @if(authService.userToken == undefined) {

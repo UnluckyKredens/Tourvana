@@ -1,4 +1,4 @@
 export class AuthService {
-    static userToken: undefined | number
+    static userToken: undefined | number = 1;
     
 }

@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './activity-presenter.scss'
 })
 export class ActivityPresenter {
-  activity: boolean | undefined
+  activity: boolean | undefined = true;
 }

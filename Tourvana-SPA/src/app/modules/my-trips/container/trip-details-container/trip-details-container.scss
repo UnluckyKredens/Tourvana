@@ -1,0 +1,185 @@
+.details {
+  padding: 1% 4%;
+
+  &__header {
+    // padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #b5bbba64 solid;
+    margin-bottom: 2%;
+  }
+
+  .overall {
+    display: grid;
+    grid-template-columns: 0.8fr 0.2fr;
+    column-gap: 5%;
+
+    &__atractions {
+      &--btn {
+        display: flex;
+        justify-self: flex-end;
+        margin: 0 1%;
+      }
+    }
+
+    &__notes {
+      &--field {
+        width: 100%;
+        min-height: 500px;
+        overflow: auto;
+
+        textarea[matInput] {
+          height: auto;
+          min-height: 448px;
+          max-height: 448px;
+          overflow: auto;
+        }
+      }
+    }
+  }
+
+  .informations {
+
+    &__transport {
+      width: 100%;
+
+      &--field {
+        width: 100%;
+      }
+    }
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+
+    &__contributors {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+
+      &--name {
+        width: 100%;
+        font-size: 18px;
+        margin: 0;
+      }
+
+      &--role {
+        width: 100%;
+        font-weight: lighter;
+        font-size: 12px;
+        margin: 1% 1%;
+      }
+
+      &--btn {
+        width: 20%;
+      }
+    }
+
+    &__payments {
+      &--payment {
+        display: flex;
+        justify-content: space-between;
+        margin: 2% 0;
+      }
+    }
+  }
+}
+
+.hotel {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #b5bbba64;
+  border-radius: 15px;
+
+
+  &__about {
+    display: flex;
+    width: 100%;
+
+    img {
+      width: 196px;
+      border-radius: 10px 0 0 10px;
+      height: auto;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        font-size: 18px;
+        font-weight: bold;
+        width: 100%;
+        margin: 2%;
+      }
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 2%;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 8vw;
+
+      p {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        //   width: 100%;
+        margin: 2%;
+      }
+    }
+
+    &--check {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.attraction {
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #b5bbba64;
+  border-radius: 15px;
+  margin: 1% 0;
+
+  &__about {
+    &--name {
+      font-size: 22px;
+      font-weight: bolder;
+      margin: 2% 0 !important;
+    }
+
+    &--description {
+      margin: 0;
+      font-size: 18px;
+      font-weight: lighter;
+    }
+
+    &--info {
+      color: #5AC0AB;
+      margin: 3% 0 !important;
+      font-weight: lighter;
+      cursor: pointer;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__check {
+    transform: scale(1.3);
+  }
+}
