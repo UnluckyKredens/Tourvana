@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import {empty, Observable,  } from 'rxjs';
-import { TripService } from '../../../../services/trip-service';
-import { TripModel } from '../../../../../../shared/model/trip.model';
-import { TransportEnum } from '../../../../../../shared/enums/transport.enum';
-import { StepService } from '../../../../services/step-service';
+import {Observable,  } from 'rxjs';
+import { TripService } from '../../services/trip-service';
+import { StepService } from '../../services/step-service';
 
 const today = new Date();
 const month = today.getMonth();

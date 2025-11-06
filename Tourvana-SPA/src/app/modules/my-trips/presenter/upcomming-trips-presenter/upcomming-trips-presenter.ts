@@ -19,9 +19,12 @@ export class UpcommingTripsPresenter {
   }
 
   getMyTrips() {
-    this.myTripsService.getMyTrips().subscribe(trips => {
+    this.myTripsService.getMyTrips().subscribe({
+      next: (trips) => {
       this.upcommingTrips = trips
       console.log(this.upcommingTrips)
-    })
+    },
+    error: err => {}
+  })
   }
 }

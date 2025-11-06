@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Query } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, HttpStatus, Post, Query } from '@nestjs/common';
 import { AttractionService } from './attraction.service';
 import { Attraction } from 'src/entities/trip/attraction.entity';
 
@@ -13,6 +13,7 @@ export class AttractionController {
     }
 
     @Post('add')
+    @HttpCode(HttpStatus.OK)
     addAttraction(@Body() attractions: Attraction) {
         return this.attractionService.addAttractions(attractions)
     }

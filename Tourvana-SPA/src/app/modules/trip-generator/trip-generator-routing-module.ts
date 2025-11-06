@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateTripContainer } from './container/create-trip-container/create-trip-container';
-import { DataPresenter } from './container/create-trip-container/presenter/data-presenter/data-presenter';
-import { HotelPresenter } from './container/create-trip-container/presenter/hotel-presenter/hotel-presenter';
-import { AttractionsPresenter } from './container/create-trip-container/presenter/attractions-presenter/attractions-presenter';
-import { SummaryPresenter } from './container/create-trip-container/presenter/summary-presenter/summary-presenter';
+import { DataPresenter } from './presenter/data-presenter/data-presenter';
+import { HotelPresenter } from './presenter/hotel-presenter/hotel-presenter';
+import { AttractionsPresenter } from './presenter/attractions-presenter/attractions-presenter';
+import { SummaryPresenter } from './presenter/summary-presenter/summary-presenter';
 
 const routes: Routes = [
   {

@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Logger, Param, Post, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Logger, Param, Post, Req, UseGuards } from '@nestjs/common';
 import { CreateTripDto } from './dtos/trip/createTrip.dto';
 import { TripService } from './trip.service';
 import { ApiBearerAuth, ApiHeader, ApiSecurity } from '@nestjs/swagger';
@@ -12,6 +12,7 @@ export class TripController {
 
     constructor(private readonly tripService: TripService) {}
     @Post('create')
+    @HttpCode(HttpStatus.OK)
     createTrip(@Req() req, @Body() createTripDto: CreateTripDto) {
         return this.tripService.createTrip(req.user.userId, createTripDto);
     }

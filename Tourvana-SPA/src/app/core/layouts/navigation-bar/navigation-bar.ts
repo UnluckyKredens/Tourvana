@@ -26,4 +26,9 @@ export class NavigationBar {
     }
   });
 }
+
+  logout() {
+    localStorage.clear()
+    window.location.reload()
+  }
 }

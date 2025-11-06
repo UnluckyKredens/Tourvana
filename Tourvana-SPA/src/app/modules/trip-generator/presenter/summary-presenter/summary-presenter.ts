@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TripService } from '../../../../services/trip-service';
-import { TripModel } from '../../../../../../shared/model/trip.model';
+import { TripService } from '../../services/trip-service';
+import { TripModel } from '../../../../shared/model/trip.model';
 
 @Component({
   selector: 'app-summary-presenter',

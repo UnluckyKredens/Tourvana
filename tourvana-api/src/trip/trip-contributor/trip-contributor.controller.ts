@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post, Req, UseGuards } from '@nestjs/common';
 import { TripContributorService } from './trip-contributor.service';
 import { JwtGuard } from 'src/auth/jwt.guard';
 import { ApiBearerAuth } from '@nestjs/swagger';
@@ -24,6 +24,7 @@ export class TripContributorController {
     }
 
     @Post('add')
+    @HttpCode(HttpStatus.OK)
     addContributor(@Body() body: AddTripContributorDto) {
         return this.tcService.addContributor(body);
     }

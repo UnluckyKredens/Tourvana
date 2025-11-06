@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Post, Req, UseGuards } from '@nestjs/common';
 import { ApiBearerAuth, ApiHeader, ApiSecurity } from '@nestjs/swagger';
 import { InjectRepository } from '@nestjs/typeorm';
 import { JwtGuard } from 'src/auth/jwt.guard';
@@ -25,6 +25,7 @@ export class PaymentController {
     }
 
     @Post('add')
+    @HttpCode(HttpStatus.OK)
     addPayment(@Req() req, @Body() paymentDto: AddPaymentDto) {
          if(!paymentDto.userId) {
             paymentDto.userId = req.user.userId;
