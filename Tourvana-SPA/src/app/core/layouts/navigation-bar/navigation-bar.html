@@ -1,6 +1,6 @@
 <div class="navigation">
   <div class="navigation__logo">
-    <img src="images/Logos/Tourvana-Black.png" alt="Tourvana logo"  [routerLink]="'/'"/>
+    <img src="images/Logos/Tourvana-Black.png" alt="Tourvana logo" [routerLink]="'/'" />
   </div>
 
   <!-- BURGER ICON -->
@@ -13,23 +13,19 @@
   <!-- DESKTOP MENU -->
   <div class="navigation__desktop">
     <button mat-button [routerLink]="['/articles/list']">Articles</button>
-
     <button mat-button (click)="goToAbout()">About</button>
     @if(!userToken) {
     <button mat-raised-button color="primary" [routerLink]="'/auth'">Login</button>
     <button mat-raised-button [routerLink]="['/auth/register']">Register</button>
     }
     @else {
-      <button mat-button [routerLink]="['/trips']">Trips</button>
-      <button mat-button (click)="logout()">Wyloguj</button>
-      <img class="navigation__desktop--user" src="/images/Icons/user.png">
+    <button mat-button [routerLink]="['/trips']">Trips</button>
+    <button mat-button (click)="logout()">Wyloguj</button>
+    <img class="navigation__desktop--user" src="/images/Icons/user.png">
     }
-
   </div>
-
   <!-- MOBILE OVERLAY MENU -->
   <div class="navigation__overlay" [class.active]="menuOpen">
-    <!-- Close icon (✕) inside overlay -->
     <div class="overlay__close" (click)="toggleMenu ()">✕</div>
 
     <button mat-button (click)="toggleMenu ()">Articles</button>
