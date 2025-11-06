@@ -34,7 +34,7 @@ export class AuthInterceptorService implements HttpInterceptor {
           if(err instanceof HttpErrorResponse) {
             if(err.status === 401) {
               localStorage.clear()
-              this.snackbar.open(err.error.message, "Ok")
+              this.snackbar.open("Nie zalogowano", "Ok")
             }
           }
           throw err

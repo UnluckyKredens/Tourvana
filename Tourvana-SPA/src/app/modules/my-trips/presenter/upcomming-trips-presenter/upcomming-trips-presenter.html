@@ -1,4 +1,5 @@
 <div class="container">
+  @if(upcommingTrips) {
   @for(trip of upcommingTrips; track trip.trip.tripId ) {
   <div class="new trip" [routerLink]="[`/trips/details/${trip.tripId}`]">
     <img class="trip__image"
@@ -12,4 +13,6 @@
     <img class="new__icon" src="/images/Icons/add.png">
     <span>Stwórz nową podróz</span>
   </div>
+  }
+
 </div>

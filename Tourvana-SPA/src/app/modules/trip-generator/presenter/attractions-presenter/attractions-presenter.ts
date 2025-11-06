@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { AttractionModel } from '../../../../../../shared/model/attraction.model';
-import { TripService } from '../../../../services/trip-service';
-import { StepService } from '../../../../services/step-service';
+import { AttractionModel } from '../../../../shared/model/attraction.model';
+import { TripService } from '../../services/trip-service';
+import { StepService } from '../../services/step-service';
 
 @Component({
   selector: 'app-attractions-presenter',

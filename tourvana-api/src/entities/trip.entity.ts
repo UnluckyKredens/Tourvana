@@ -14,6 +14,8 @@ export class Trip {
     name: string;
 
     @Column({type: 'text'})
+    from: string;
+    @Column({type: 'text'})
     destination: string;
     
     @CreateDateColumn({type: 'datetime'})

@@ -20,6 +20,7 @@
     <button mat-raised-button [routerLink]="['/auth/register']">Register</button>
     }
     @else {
+      <button mat-button (click)="logout()">Wyloguj</button>
       <img class="navigation__desktop--user" src="/images/Icons/user.png">
     }
 

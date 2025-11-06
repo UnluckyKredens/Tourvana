@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { TripModel } from '../../../../../../shared/model/trip.model';
-import { HotelModel } from '../../../../../../shared/model/hotel.model';
-import { TripService } from '../../../../services/trip-service';
-import { StepService } from '../../../../services/step-service';
+import { TripModel } from '../../../../shared/model/trip.model';
+import { HotelModel } from '../../../../shared/model/hotel.model';
+import { TripService } from '../../services/trip-service';
+import { StepService } from '../../services/step-service';
 
 @Component({
   selector: 'app-hotel-presenter',

@@ -7,6 +7,7 @@ import { TripContributorModel } from "./trip/tripContributors.model";
 export interface TripModel {
   tripId: string;
   name: string;
+  from: string;
   destination: string;
   startDate: Date;
   endDate: Date;

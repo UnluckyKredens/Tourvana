@@ -15,7 +15,7 @@ export class LoginContainer {
   constructor(private authServce: AuthService, private snackBar: MatSnackBar, private router: Router) {}
   hide = signal(true);
   loginForm = new FormGroup({
-    email: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.email),
     password: new FormControl('', Validators.required)
   })
 
@@ -32,8 +32,15 @@ export class LoginContainer {
       }
 
       this.authServce.login(body).subscribe({
-        next: () => {this.snackBar.open("Zalogowano"); this.router.navigate([''])},
-        error: (err: any) => { this.snackBar.open("Coś poszło nie tak"); console.log(err.error)
+        next: (res) => {
+          localStorage.setItem('userToken', res)
+          this.snackBar.open("Zalogowano", "Ok", {duration: 800});
+          this.router.navigate([''])
+        },
+        error: (err) => {
+          var res = JSON.parse(err.error)
+          console.log(res.message)
+          this.snackBar.open(res.message, "Ok", {duration: 800});
       }
     });
     }
