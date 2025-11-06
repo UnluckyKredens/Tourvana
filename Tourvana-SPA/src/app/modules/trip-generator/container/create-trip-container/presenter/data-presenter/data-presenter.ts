@@ -20,7 +20,7 @@ const year = today.getFullYear();
 
 
 
-export class DataPresenter implements OnInit {
+export class DataPresenter {
   constructor(private router: ActivatedRoute, private tripService: TripService, private stepService: StepService ) {
         this.router.params.subscribe(data => {
       this.dataForm.controls['destination'].setValue(data['destination'])
@@ -43,72 +43,72 @@ export class DataPresenter implements OnInit {
   filteredOptions: Observable<string[]> | undefined;
 
 
-  ngOnInit() {
-    this.getInfo();
-    this.validate();
-   }
+  // ngOnInit() {
+  //   this.getInfo();
+  //   this.validate();
+  //  }
 
-  
-  ngOnDestroy(): void {
-    this.saveData()
+
+  // ngOnDestroy(): void {
+  //   this.saveData()
+  // }
+
+  // validate(): void {
+  //   this.stepService.validateStep$.subscribe(() => {
+  //     const isValid = this.dataForm.valid && this.dateRange.valid && this.dateRange.value.dateEnd != this.dateRange.value.dateStart
+  //     if(isValid) {
+  //       const formData = {
+  //         ...this.dataForm.value,
+  //         ...this.dateRange.value
+  //       };
+  //       this.stepService.sendStatus(true)
+  //       this.saveData();
+  //     }else {
+  //       this.stepService.sendStatus(false)
+  //     }
+  //   })
+  // }
+
+  // getInfo(): void {
+  //   if(this.router.snapshot.params['destination']) {
+  //     let url = this.router.snapshot.params['destination']
+  //     this.dataForm.value.destination = url
+  //   }else if(!this.dataForm.value.destination) {
+  //     if(this.tripService.getData().destination != undefined) {
+  //       let serviceData = this.tripService.getData();
+  //         this.dataForm.setValue({
+  //           from: serviceData.from,
+  //           destination: serviceData.destination,
+  //           budget: serviceData.budget,
+  //           participants: serviceData.patricipants,
+  //           transport: serviceData.transport
+  //         })
+  //         this.dateRange.setValue({
+  //           dateStart: serviceData.dateRange.dateStart,
+  //           dateEnd: serviceData.dateRange.dateEnd
+  //         })
+  //     }else {
+  //       this.dataForm.reset();
+  //     }
+
+
+  //   }
   }
+//   saveData(): void {
+//     var data: TripModel = {
+//       from: this.dataForm.value.from!,
+//       destination: this.dataForm.value.destination!,
+//       budget: this.dataForm.value.budget!,
+//       patricipants: this.dataForm.value.participants!,
+//       transport: this.dataForm.value.transport as TransportEnum,
+//       dateRange: {
+//         dateStart: this.dateRange.value.dateStart!,
+//         dateEnd: this.dateRange.value.dateEnd!
+//       },
+//       hotel: undefined,
+//       attractions: undefined
+//     }
 
-  validate(): void {
-    this.stepService.validateStep$.subscribe(() => {
-      const isValid = this.dataForm.valid && this.dateRange.valid && this.dateRange.value.dateEnd != this.dateRange.value.dateStart
-      if(isValid) {
-        const formData = {
-          ...this.dataForm.value,
-          ...this.dateRange.value
-        };
-        this.stepService.sendStatus(true)
-        this.saveData();
-      }else {
-        this.stepService.sendStatus(false)
-      }
-    })
-  }
-
-  getInfo(): void {
-    if(this.router.snapshot.params['destination']) {
-      let url = this.router.snapshot.params['destination']
-      this.dataForm.value.destination = url
-    }else if(!this.dataForm.value.destination) {
-      if(this.tripService.getData().destination != undefined) {
-        let serviceData = this.tripService.getData();
-          this.dataForm.setValue({
-            from: serviceData.from,
-            destination: serviceData.destination,
-            budget: serviceData.budget,
-            participants: serviceData.patricipants,
-            transport: serviceData.transport 
-          })
-          this.dateRange.setValue({
-            dateStart: serviceData.dateRange.dateStart,
-            dateEnd: serviceData.dateRange.dateEnd
-          })
-      }else {
-        this.dataForm.reset();
-      }
-
-    
-    }
-  }
-  saveData(): void {  
-    var data: TripModel = {
-      from: this.dataForm.value.from!,
-      destination: this.dataForm.value.destination!,
-      budget: this.dataForm.value.budget!,
-      patricipants: this.dataForm.value.participants!,
-      transport: this.dataForm.value.transport as TransportEnum,
-      dateRange: {
-        dateStart: this.dateRange.value.dateStart!,
-        dateEnd: this.dateRange.value.dateEnd!
-      },
-      hotel: undefined,
-      attractions: undefined
-    }
-
-    this.tripService.setData(data)
-  }
-}
+//     this.tripService.setData(data)
+//   }
+// }

@@ -6,7 +6,7 @@ export class JwtGuard implements CanActivate {
 constructor(private readonly auth: AuthService) {}
 
   async canActivate(ctx: ExecutionContext): Promise<boolean> {
-
+    // return true
     const req = ctx.switchToHttp().getRequest<Request>();
 
     const authz = req.headers['authorization'];

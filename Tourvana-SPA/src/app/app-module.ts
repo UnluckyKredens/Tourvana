@@ -7,6 +7,9 @@ import { MainLayout } from './core/layouts/main-layout/main-layout';
 import { CoreModule } from './core/core.module';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthService } from './modules/auth/services/auth.service';
+import { AuthInterceptorService } from './shared/interceptors/auth.interceptor.service';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     CoreModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [App]
 })

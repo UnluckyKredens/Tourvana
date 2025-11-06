@@ -13,13 +13,13 @@ export class TripAttraction {
     trip: Trip;
 
     @Column()
-    tripId: string
+    tripId: string;
 
     @ManyToOne(() => Attraction, attraction => attraction.attractionId, {onDelete: 'CASCADE'})
     @JoinColumn({name: 'attractionId'})
     attraction: Attraction;
 
     @Column()
-    attractionId: Attraction
+    attractionId: string;
     
 }

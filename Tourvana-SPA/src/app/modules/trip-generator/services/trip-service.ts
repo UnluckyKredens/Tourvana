@@ -17,26 +17,26 @@ export class TripService {
   getData(): TripModel {
     return this.TripModelSubject.getValue() as TripModel
   }
-  setHotel(data: HotelModel) {
-    this.TripModelSubject.subscribe(h => {
-      h.hotel = data
-    })
-  }
+  // setHotel(data: HotelModel) {
+  //   this.TripModelSubject.subscribe(h => {
+  //     h.hotel = data
+  //   })
+  // }
 
-  setAttractions(data: AttractionModel[]) {
-      const current = this.TripModelSubject.getValue();
+  // setAttractions(data: AttractionModel[]) {
+  //     const current = this.TripModelSubject.getValue();
 
-      const incomingUrls = data.map(a => a.url);
-      const currentUrls = current.attractions?.map(a => a.url) ?? [];
-      const remaining = current.attractions?.filter(a => incomingUrls.includes(a.url)) ?? [];
-      const newOnes = data.filter(a => !currentUrls.includes(a.url));
-      const merged = [...remaining, ...newOnes];
-      current.attractions = merged;
-      this.TripModelSubject.next(current);
-  }
+  //     const incomingUrls = data.map(a => a.url);
+  //     const currentUrls = current.attractions?.map(a => a.url) ?? [];
+  //     const remaining = current.attractions?.filter(a => incomingUrls.includes(a.url)) ?? [];
+  //     const newOnes = data.filter(a => !currentUrls.includes(a.url));
+  //     const merged = [...remaining, ...newOnes];
+  //     current.attractions = merged;
+  //     this.TripModelSubject.next(current);
+  // }
 
   clearData() {
-    let data: TripModel 
+    let data: TripModel
     this.TripModelSubject.complete()
   }
 

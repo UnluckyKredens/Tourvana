@@ -21,16 +21,16 @@ export class SummaryPresenter {
     removeAttraction(url: string): void {
     const current = this.tripService.TripModelSubject.getValue();
 
-    if (!current.attractions?.length) return;
+    // if (!current.attractions?.length) return;
 
-    current.attractions = current.attractions.filter(a => a.url !== url);
+    // current.attractions = current.attractions.filter(a => a.url !== url);
 
     this.tripService.TripModelSubject.next(current);
   }
 
   removeHotel() {
     this.tripService.TripModelSubject.subscribe(t => {
-      t.hotel = undefined
+      // t.hotel = undefined
     })
     this.trip = this.tripService.getData()
   }

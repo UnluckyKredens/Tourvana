@@ -15,7 +15,7 @@
     <button mat-button [routerLink]="['/articles/list']">Articles</button>
     <button mat-button [routerLink]="['/trips']">Trips</button>
     <button mat-button (click)="goToAbout()">About</button>
-    @if(authService.userToken == undefined) {
+    @if(!userToken) {
     <button mat-raised-button color="primary" [routerLink]="'/auth'">Login</button>
     <button mat-raised-button [routerLink]="['/auth/register']">Register</button>
     }

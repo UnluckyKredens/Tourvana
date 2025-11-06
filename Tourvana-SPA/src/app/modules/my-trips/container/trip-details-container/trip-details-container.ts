@@ -1,6 +1,8 @@
+import { MyTripsService } from './../../services/my-trips.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs';
+import { TripModel } from '../../../../shared/model/trip.model';
 
 @Component({
   selector: 'app-trip-details-container',
@@ -9,17 +11,25 @@ import { map } from 'rxjs';
   styleUrl: './trip-details-container.scss',
 })
 export class TripDetailsContainer {
-NaN: any;
-  constructor(private router: ActivatedRoute) {
-    this.tripId = Number(this.router.snapshot.paramMap.get('id'))
-
+  constructor(private router: ActivatedRoute, private readonly myTripsService: MyTripsService) {
+    this.tripId = this.router.snapshot.paramMap.get('id')
   }
 
-  tripId: number | null = null
+  trip: TripModel | undefined
+  tripdays: Date | undefined
+  tripId: string | null = null
   ngOnInit(): void {
-    if(isNaN(Number(this.tripId))) {
-      this.tripId = null
+    this.getTripDetails()
+  }
+
+
+  getTripDetails() {
+    if(this.tripId) {
+    this.myTripsService.getOneTrip(this.tripId).subscribe(trip => {
+      this.trip = trip
+
+      console.log(trip)
+    })
     }
-    console.log(this.tripId)
   }
 }

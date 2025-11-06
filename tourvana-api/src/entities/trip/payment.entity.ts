@@ -4,19 +4,17 @@ import { User } from "../user.entity";
 
 @Entity()
 export class Payment {
-    @PrimaryGeneratedColumn()
-    paymentId: number;
+    @PrimaryGeneratedColumn('uuid')
+    paymentId: string;
 
     @ManyToOne(() => Trip, trip => trip.payments, {onDelete: 'CASCADE'})
-    @Index()
     @JoinColumn({name: 'tripId'})
     trip: Trip;
 
-    @Column()
+    @Column('uuid')
     tripId: string;
 
     @ManyToOne(() => User, user => user.payments, {onDelete: 'CASCADE'})
-    @Index() 
     @JoinColumn({name: 'userId'})
     user: User;
 

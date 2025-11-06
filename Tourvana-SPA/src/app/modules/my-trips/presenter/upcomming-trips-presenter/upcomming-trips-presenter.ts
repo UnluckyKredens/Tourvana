@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MyTripsService } from '../../services/my-trips.service';
+import { MyTripDto } from '../../../../shared/dtos/myTripDto';
 
 @Component({
   selector: 'app-upcomming-trips-presenter',
@@ -8,4 +10,18 @@ import { Component } from '@angular/core';
 })
 export class UpcommingTripsPresenter {
 
+  upcommingTrips: MyTripDto[] = []
+
+  constructor(private myTripsService: MyTripsService) {}
+
+  ngOnInit(): void {
+    this.getMyTrips()
+  }
+
+  getMyTrips() {
+    this.myTripsService.getMyTrips().subscribe(trips => {
+      this.upcommingTrips = trips
+      console.log(this.upcommingTrips)
+    })
+  }
 }

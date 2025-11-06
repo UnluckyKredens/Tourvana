@@ -28,20 +28,20 @@ export class Trip {
     @Column('text', {nullable: true})
     transport: 'bus' | 'train' | 'car' | 'plane' | 'ship' | 'other';
 
-    @OneToMany(() => Payment, payment => payment.tripId, {cascade: true, nullable: true, onDelete: 'CASCADE'})
-    @JoinTable()
+    @Column('text')
+    notes?: string
+
+    @OneToMany(() => Payment, payment => payment.trip, {cascade: true, nullable: true, onDelete: 'CASCADE'})
     payments?: Payment[];
 
     @Column({type: 'decimal', precision: 10, scale: 2, nullable: true, default: 0})
     totalPayments: number;
 
-    @OneToMany(() => TripContributor, tc => tc.tripContributorId, {cascade: true, nullable: true, onDelete: 'CASCADE'})
-    @JoinTable()
-    contributors: TripContributor[];
+    @OneToMany(() => TripContributor, tc => tc.trip, {cascade: true, nullable: true, onDelete: 'CASCADE'})
+    contributors?: TripContributor[];
 
     @OneToMany(() => TripAttraction, ta => ta.trip, {cascade: true, nullable: true, onDelete: 'CASCADE'})
-    @JoinTable()
-    attractions: TripAttraction[];
+    attractions?: TripAttraction[];
 
     @OneToMany(() => Hotel, hotel => hotel.trip, {nullable: true})
     hotel?: Hotel;

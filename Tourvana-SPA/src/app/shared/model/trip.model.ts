@@ -1,17 +1,22 @@
 import { TransportEnum } from "../enums/transport.enum"
 import { AttractionModel } from "./attraction.model"
 import { HotelModel } from "./hotel.model"
+import { PaymentModel } from "./payment.model";
+import { TripContributorModel } from "./trip/tripContributors.model";
 
 export interface TripModel {
-    from: string,
-    destination: string,
-    budget: number,
-    patricipants: number,
-    transport: TransportEnum,
-    dateRange: {
-        dateStart: Date,
-        dateEnd: Date
-    }
-    hotel: HotelModel | undefined
-    attractions: AttractionModel[] | undefined
+  tripId: string;
+  name: string;
+  destination: string;
+  startDate: Date;
+  endDate: Date;
+  budget: number;
+  transport: 'bus' | 'train' | 'car' | 'plane' | 'ship' | 'other';
+  totalPayments: number;
+  notes?: string;
+
+  hotel: HotelModel;
+  attractions:AttractionModel[]
+  payments: PaymentModel[]
+  contributors: TripContributorModel[]
 }

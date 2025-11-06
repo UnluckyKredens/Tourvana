@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Logger, Post, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Logger, Param, Post, Req, UseGuards } from '@nestjs/common';
 import { CreateTripDto } from './dtos/trip/createTrip.dto';
 import { TripService } from './trip.service';
 import { ApiBearerAuth, ApiHeader, ApiSecurity } from '@nestjs/swagger';
@@ -19,5 +19,10 @@ export class TripController {
     @Delete('delete')
     deleteTrip(@Req() req, @Body() tripId: DeleteTripDto) {
         return this.tripService.deleteTrip(tripId.tripId, req.user.userId);
+    }
+
+    @Get('id/:id')
+    getTripById(@Req() req, @Param('id') id: string ) {
+        return this.tripService.getTripById(req.user.userId, id)
     }
 }

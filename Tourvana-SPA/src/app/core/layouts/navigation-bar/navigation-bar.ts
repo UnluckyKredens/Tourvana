@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { MaterialModule } from '../../../shared/shared.module';
 import { Router, RouterLink } from '@angular/router';
 import { App } from '../../../app';
-import { AuthService } from '../../../shared/services/auth.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -13,7 +12,7 @@ import { AuthService } from '../../../shared/services/auth.service';
 })
 export class NavigationBar {
   constructor(private router: Router) {}
-  authService = AuthService
+  userToken = localStorage.getItem('userToken')
   menuOpen = false;
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
