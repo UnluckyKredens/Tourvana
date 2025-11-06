@@ -5,6 +5,7 @@ import { LoginContainer } from './modules/auth/container/login-container/login-c
 import { RegisterContainer } from './modules/auth/container/register-container/register-container';
 import { CreateTripContainer } from './modules/trip-generator/container/create-trip-container/create-trip-container';
 import { P } from '@angular/cdk/keycodes';
+import { authGuard } from './shared/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
       {
         path: 'trips',
         loadChildren: () => import("./modules/my-trips/my-trips-module").then(t => t.MyTripsModule),
+        canActivate: [authGuard]
       },
       {
         path: 'articles',

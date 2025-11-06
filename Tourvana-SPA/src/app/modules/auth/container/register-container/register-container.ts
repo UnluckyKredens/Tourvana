@@ -24,7 +24,7 @@ export class RegisterContainer {
     name: new FormControl('', Validators.required),
     surname: new FormControl('', Validators.required),
     email: new FormControl('', Validators.email),
-    phoneNumber: new FormControl('', [Validators.required, Validators.pattern(/^\+?[1-9]\d{1,9}$/)]),
+    phoneNumber: new FormControl('', [Validators.required, Validators.pattern(/^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/)]),
     password: new FormControl('', Validators.required),
     password2: new FormControl('', Validators.required)
   })

@@ -1,4 +1,4 @@
-import { Observable, tap } from 'rxjs';
+import { catchError, map, Observable, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { apiEndpoint } from '../../../core/http/apiEndpoint';
@@ -22,5 +22,12 @@ export class AuthService {
 
     getAuthToken() {
       return localStorage.getItem('userToken');
+    }
+
+    isAuth(token: string): Observable<boolean> {
+      return this.http.get(apiEndpoint.auth.tokenValid).pipe(
+        map(() => true),
+        catchError(async (err) => false)
+      )
     }
 }

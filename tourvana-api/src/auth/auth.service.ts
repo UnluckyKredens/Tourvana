@@ -1,4 +1,4 @@
-import { BadRequestException, HttpException, HttpStatus, Injectable, Logger, UnauthorizedException } from '@nestjs/common';
+import { BadRequestException, HttpException, HttpStatus, Inject, Injectable, Logger, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'src/entities/user.entity';
@@ -8,6 +8,7 @@ import { RegisterDto } from './dtos/register.dto';
 import  * as argon2 from 'argon2';
 import { BadRequestError } from 'openai';
 import { ApiBadRequestResponse } from '@nestjs/swagger';
+import { JwtGuard } from './jwt.guard';
 
 @Injectable()
 export class AuthService {
@@ -46,6 +47,7 @@ export class AuthService {
     async findUserByEmail(email: string) {
         return await this.userRepo.findOneBy({email: email}); 
     }
+
 
     async validateBearer(token: string) {
         if(!token) {
