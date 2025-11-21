@@ -1,0 +1,167 @@
+[
+  {
+    
+    "name": "Grand Hotel Kraków",
+    "location": "ul. Sławkowska 5, 31-014 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Luksusowy 5-gwiazdkowy hotel w sercu Krakowa, w dawnej rezydencji książąt Czartoryskich. :contentReference[oaicite:0]{index=0}",
+    "rating": 4.8,
+    "imageUrl": "https://www.grand.pl/en/wp-content/uploads/...jpg",
+    "url": "https://www.grand.pl/en/"
+  },
+  {
+    
+    "name": "H15 Palace, A Luxury Collection Hotel, Krakow",
+    "location": "ul. Św. Jana 15, 31-017 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Pałacowy hotel 5-gwiazdkowy w samym centrum Starego Miasta, dawny Pałac Lubomirskich. :contentReference[oaicite:1]{index=1}",
+    "rating": 4.9,
+    "imageUrl": "https://hotelh15palace.pl/wp-content/uploads/...jpg",
+    "url": "https://hotelh15palace.pl/en"
+  },
+  {
+    
+    "name": "Radisson Blu Hotel, Kraków",
+    "location": "ul. Straszewskiego 17, 31-101 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "5-gwiazdkowy hotel w sercu Krakowa, blisko Rynku Głównego i Wawelu. :contentReference[oaicite:2]{index=2}",
+    "rating": 4.5,
+    "imageUrl": "https://www.radissonhotels.com/content/dam/hotel-images/krkzw/krkzw_exterior.jpg",
+    "url": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-krakow"
+  },
+  {
+    
+    "name": "Hyatt Place Kraków",
+    "location": "Aleja 3 Maja 47a, 30-062 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Nowoczesny hotel city-break, kilka przystanków tramwajem od centrum Krakowa. :contentReference[oaicite:3]{index=3}",
+    "rating": 4.3,
+    "imageUrl": "https://hyattplacekrakow.com/wp-content/uploads/...jpg",
+    "url": "https://www.hyatt.com/hyatt-place/en-US/krkzk-hyatt-place-krakow"
+  },
+  {
+    
+    "name": "DoubleTree by Hilton Kraków Hotel & Convention Center",
+    "location": "ul. Dąbska 5, 31-572 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Hotel z centrum konferencyjnym, krytym basenem, w północno-wschodnim rejonie miasta. :contentReference[oaicite:4]{index=4}",
+    "rating": 4.2,
+    "imageUrl": "https://cdn.hilton.com/.../DoubleTree-Krakow-exterior.jpg",
+    "url": "https://www.hilton.com/en/hotels/krkccdi-doubletree-krakow-hotel-and-convention-center/"
+  },
+  {
+    
+    "name": "Q Hotel Kraków Bronowice",
+    "location": "ul. Stachiewicza 24, 30-017 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "3-gwiazdkowy hotel w dzielnicy Bronowice, dobry wybór jeśli szukasz wygodnego połączenia z centrum. :contentReference[oaicite:5]{index=5}",
+    "rating": 3.8,
+    "imageUrl": "https://qhotels.pl/wp-content/uploads/...bronowice.jpg",
+    "url": "https://qhotels.pl/en/q-hotel-krakow-bronowice"
+  },
+  {
+    
+    "name": "Hotel Wielopole",
+    "location": "ul. Wielopole 4, 31-072 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Hotel zlokalizowany blisko centrum, oferujący standard europejski i polską gościnność. :contentReference[oaicite:6]{index=6}",
+    "rating": 4.0,
+    "imageUrl": "https://www.wielopole.pl/en/wp-content/uploads/...jpg",
+    "url": "https://www.wielopole.pl/en/"
+  },
+  {
+    
+    "name": "Hotel Teatr Kraków",
+    "location": "ul. Gołębia 2, 31-007 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Boutique hotel w zabytkowej kamienicy w centrum Krakowa. :contentReference[oaicite:7]{index=7}",
+    "rating": 4.4,
+    "imageUrl": "https://www.hotelteatr.pl/en/wp-content/uploads/...jpg",
+    "url": "https://www.hotelteatr.pl/en/"
+  },
+  {
+    
+    "name": "Hotel Kazimierz II",
+    "location": "ul. Starowiślna 48-50, 31-037 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Zlokalizowany w centrum dzielnicy Kazimierz – dobry dla turystów i podróży służbowych. :contentReference[oaicite:8]{index=8}",
+    "rating": 3.7,
+    "imageUrl": "https://www.hk.com.pl/en/kazimierz-hotel-2/images/hotel.jpg",
+    "url": "https://www.hk.com.pl/en/kazimierz-hotel-2/"
+  },
+  {
+    
+    "name": "Hotel Copernicus",
+    "location": "ul. Kanonicza 16, 31-062 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Historyczny hotel na ulicy Kanoniczej, w sercu Starego Miasta. :contentReference[oaicite:9]{index=9}",
+    "rating": 4.6,
+    "imageUrl": "https://www.hotelcopernicus.com/wp-content/uploads/...jpg",
+    "url": "https://www.hotelcopernicus.com/"
+  },
+  {
+    
+    "name": "PURO Kraków Kazimierz",
+    "location": "ul. Biskupa Kisiała 10, 31-121 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Nowoczesny design-hotel w modnej dzielnicy Kazimierz. :contentReference[oaicite:10]{index=10}",
+    "rating": 4.5,
+    "imageUrl": "https://www.purohotel.pl/hotel/krakow-kazimierz/wp-content/uploads/...jpg",
+    "url": "https://www.purohotel.pl/hotel/krakow-kazimierz/"
+  },
+  {
+    
+    "name": "Hotel Amber Boutique Kraków",
+    "location": "ul. Floriańska 10, 31-021 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Stylowy hotel butikowy przy Floriańskiej — jednej z głównych ulic Starego Miasta. :contentReference[oaicite:11]{index=11}",
+    "rating": 4.2,
+    "imageUrl": "https://www.hotelamber.pl/wp-content/uploads/...jpg",
+    "url": "https://www.hotelamber.pl/en/"
+  },
+  {
+    
+    "name": "Sheraton Grand Kraków",
+    "location": "ul. Powiśle 7, 31-101 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "5-gwiazdkowy hotel położony nad Wisłą, przy Zamku Wawel. :contentReference[oaicite:12]{index=12}",
+    "rating": 4.4,
+    "imageUrl": "https://www.marriott.com/hotels/travel/krksi-sheraton-grand-krakow/krksi-exterior.jpg",
+    "url": "https://www.marriott.com/hotels/travel/krksi-sheraton-grand-krakow/"
+  },
+  {
+    
+    "name": "Hotel Centrum Kraków",
+    "location": "ul. Monte Cassino 1, 31-155 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Nowocześnie wyposażony hotel biznesowy w dzielnicy Nowa Huta / wschodni Kraków. :contentReference[oaicite:13]{index=13}",
+    "rating": 3.9,
+    "imageUrl": "https://www.hotel-centrum.pl/en/wp-content/uploads/...jpg",
+    "url": "https://www.hotel-centrum.pl/en"
+  },
+  {
+    
+    "name": "Plaza Boutique Hotel Kraków",
+    "location": "ul. Szewska 22, 31-009 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Boutique hotel w ścisłym centrum, niedaleko Rynku Głównego. :contentReference[oaicite:14]{index=14}",
+    "rating": 4.3,
+    "imageUrl": "https://plazaboutiquehotel.pl/wp-content/uploads/...jpg",
+    "url": "https://plazaboutiquehotel.pl/"
+  }
+]

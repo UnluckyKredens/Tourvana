@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SummaryPresenter } from './summary-presenter';
+import { CreateTripDataPresenter } from './create-trip-data-presenter';
 
-describe('SummaryPresenter', () => {
-  let component: SummaryPresenter;
-  let fixture: ComponentFixture<SummaryPresenter>;
+describe('CreateTripDataPresenter', () => {
+  let component: CreateTripDataPresenter;
+  let fixture: ComponentFixture<CreateTripDataPresenter>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SummaryPresenter]
+      declarations: [CreateTripDataPresenter]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SummaryPresenter);
+    fixture = TestBed.createComponent(CreateTripDataPresenter);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

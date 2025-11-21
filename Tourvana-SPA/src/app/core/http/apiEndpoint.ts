@@ -11,6 +11,14 @@ export const apiEndpoint = {
     upcommingtrips: `${environment.apiUrl}/user/upcommingtrips`
   },
   trip: {
-    getTripById: `${environment.apiUrl}/trip/id/`
+    getTripById: `${environment.apiUrl}/trip/id/`,
+    saveTrip: `${environment.apiUrl}/trip/create`
+  },
+  hotel: {
+    getOneHotel: `${environment.apiUrl}/hotel/one/`,
+    getHotelsTo: `${environment.apiUrl}/hotel/destination/`,
+  },
+  attraction: {
+    getAttractionsTo: `${environment.apiUrl}/attraction/destination/`,
   }
 }

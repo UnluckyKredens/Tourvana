@@ -1,0 +1,57 @@
+  .container {
+  width: 90vw;
+  height: 70vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .hotel {
+    margin: 2% 0;
+    width: 95%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.3fr 0.7fr 0.1fr;
+    padding: 1%;
+    column-gap: 1%;
+    border: 1px solid #6b6b6baf;
+    border-radius: 10px;
+    &__img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+    &__details {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      p, a {
+        margin: 1% 0;
+        font-weight: lighter;
+        font-size: 12px;
+      }
+      &--title{
+        display: flex;
+        font-size: 18px !important;
+      }
+    }
+    &__options {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+  }
+
+  .icon {
+    margin: 0 1%;
+    width: 5%;
+    height: 5%;
+    font-size: 10px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #eaeaea;
+    color: #000;
+  }
+  }

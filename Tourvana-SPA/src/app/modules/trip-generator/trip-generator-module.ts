@@ -3,22 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { TripGeneratorRoutingModule } from './trip-generator-routing-module';
 import { CreateTripContainer } from './container/create-trip-container/create-trip-container';
-import { DataPresenter } from './presenter/data-presenter/data-presenter';
 import { MaterialModule } from '../../shared/shared.module';
 import { NavigationBar } from "../../core/layouts/navigation-bar/navigation-bar";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HotelPresenter } from './presenter/hotel-presenter/hotel-presenter';
-import { AttractionsPresenter } from './presenter/attractions-presenter/attractions-presenter';
-import { SummaryPresenter } from './presenter/summary-presenter/summary-presenter';
+import { CreateTripDataPresenter } from './presenter/create-trip-data-presenter/create-trip-data-presenter';
+import { CreateTripHotelPresenter } from './presenter/create-trip-hotel-presenter/create-trip-hotel-presenter';
+import { CreateTripAttractionsPresenter } from './presenter/create-trip-attractions-presenter/create-trip-attractions-presenter';
+import { CreateTripSummaryPresenter } from './presenter/create-trip-summary-presenter/create-trip-summary-presenter';
+
 
 
 @NgModule({
   declarations: [
     CreateTripContainer,
-    DataPresenter,
-    HotelPresenter,
-    AttractionsPresenter,
-    SummaryPresenter
+    CreateTripDataPresenter,
+    CreateTripHotelPresenter,
+    CreateTripAttractionsPresenter,
+    CreateTripSummaryPresenter,
   ],
   imports: [
     CommonModule,

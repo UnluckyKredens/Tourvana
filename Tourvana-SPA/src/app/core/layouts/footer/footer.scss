@@ -45,15 +45,14 @@
     &__socials {
         display: flex;
         flex-direction: column;
-        // justify-self: center;
         align-items: flex-end;
         align-content: flex-end;
-        
+
 
         img {
             flex-wrap: wrap;
             width: 48px;
         }
     }
-    
+
 }

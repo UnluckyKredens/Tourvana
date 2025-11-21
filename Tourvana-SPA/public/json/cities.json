@@ -1,0 +1,37 @@
+{
+  "cities" :  [
+  { "id": 1, "name": "Warszawa" },
+  { "id": 2, "name": "Kraków" },
+  { "id": 3, "name": "Łódź" },
+  { "id": 4, "name": "Wrocław" },
+  { "id": 5, "name": "Poznań" },
+  { "id": 6, "name": "Gdańsk" },
+  { "id": 7, "name": "Szczecin" },
+  { "id": 8, "name": "Lublin" },
+  { "id": 9, "name": "Bydgoszcz" },
+  { "id": 10, "name": "Białystok" },
+  { "id": 11, "name": "Katowice" },
+  { "id": 12, "name": "Gdynia" },
+  { "id": 13, "name": "Częstochowa" },
+  { "id": 14, "name": "Radom" },
+  { "id": 15, "name": "Rzeszów" },
+  { "id": 16, "name": "Toruń" },
+  { "id": 17, "name": "Sosnowiec" },
+  { "id": 18, "name": "Kielce" },
+  { "id": 19, "name": "Gliwice" },
+  { "id": 20, "name": "Olsztyn" },
+  { "id": 21, "name": "Bielsko-Biała" },
+  { "id": 22, "name": "Zabrze" },
+  { "id": 23, "name": "Bytom" },
+  { "id": 24, "name": "Opole" },
+  { "id": 25, "name": "Tychy" },
+  { "id": 26, "name": "Ruda Śląska" },
+  { "id": 27, "name": "Gorzów Wielkopolski" },
+  { "id": 28, "name": "Dąbrowa Górnicza" },
+  { "id": 29, "name": "Elbląg" },
+  { "id": 30, "name": "Płock" },
+  { "id": 31, "name": "Koszalin" },
+  { "id": 32, "name": "Tarnów" }
+]
+}
+

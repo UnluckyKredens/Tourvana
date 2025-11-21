@@ -44,15 +44,9 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'trip',
-    component: CreateTripContainer,
+    path: 'generator',
     data: {animation: 'trip'},
-    children: [
-      {
-        path: 'generator',
-        loadChildren: () => import("./modules/trip-generator/trip-generator-module").then(t => t.TripGeneratorModule)
-      },
-    ]
+    loadChildren: () => import("./modules/trip-generator/trip-generator-module").then(t => t.TripGeneratorModule)
   },
   {
     path: '**',

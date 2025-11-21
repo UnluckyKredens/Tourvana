@@ -1,0 +1,407 @@
+[
+  {
+    "name": "Kopalnia Soli „Wieliczka”",
+    "location": "ul. Daniłowicza 10, 32-020 Wieliczka",
+    "country": "Poland",
+    "city": "Wieliczka",
+    "description": "Jedna z najstarszych kopalni soli na świecie, wpisana na listę UNESCO.",
+    "rating": 4.8,
+    "url": "https://www.kopalnia.pl"
+  },
+  {
+    "name": "Zamek Krzyżacki w Malborku",
+    "location": "ul. Starościńska 1, 82-200 Malbork",
+    "country": "Poland",
+    "city": "Malbork",
+    "description": "Największy zamek gotycki na świecie, dawna siedziba Zakonu Krzyżackiego.",
+    "rating": 4.7,
+    "url": "https://zamek.malbork.pl"
+  },
+  {
+    "name": "Zamek Królewski na Wawelu",
+    "location": "Wawel 5, 31-001 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Historyczna rezydencja polskich królów, perła architektury renesansowej.",
+    "rating": 4.8,
+    "url": "https://wawel.krakow.pl"
+  },
+  {
+    "name": "Muzeum Auschwitz-Birkenau",
+    "location": "ul. Więźniów Oświęcimia 20, 32-603 Oświęcim",
+    "country": "Poland",
+    "city": "Oświęcim",
+    "description": "Niemiecki nazistowski obóz koncentracyjny, miejsce pamięci i muzeum.",
+    "rating": 4.9,
+    "url": "https://www.auschwitz.org"
+  },
+  {
+    "name": "Stare Miasto w Warszawie",
+    "location": "Rynek Starego Miasta, 00-272 Warszawa",
+    "country": "Poland",
+    "city": "Warszawa",
+    "description": "Historyczne centrum miasta, odbudowane po II wojnie światowej, UNESCO.",
+    "rating": 4.7,
+    "url": "https://warsawtour.pl"
+  },
+  {
+    "name": "Panorama Racławicka",
+    "location": "ul. Purkyniego 1, 50-155 Wrocław",
+    "country": "Poland",
+    "city": "Wrocław",
+    "description": "Monumentalne panoramiczne malowidło przedstawiające bitwę pod Racławicami.",
+    "rating": 4.8,
+    "url": "https://panoramaraclawicka.pl"
+  },
+  {
+    "name": "Morskie Oko",
+    "location": "Tatry, 34-500 Zakopane",
+    "country": "Poland",
+    "city": "Zakopane",
+    "description": "Największe jezioro w Tatrach, jedno z najpopularniejszych miejsc turystycznych w Polsce.",
+    "rating": 4.9,
+    "url": "https://tpn.pl"
+  },
+  {
+    "name": "Śnieżka",
+    "location": "Karkonosze, 58-540 Karpacz",
+    "country": "Poland",
+    "city": "Karpacz",
+    "description": "Najwyższy szczyt Karkonoszy z unikalną kaplicą i obserwatorium.",
+    "rating": 4.9,
+    "url": "https://kpnmab.pl"
+  },
+  {
+    "name": "Zamek Książ",
+    "location": "ul. Piastów Śląskich 1, 58-306 Wałbrzych",
+    "country": "Poland",
+    "city": "Wałbrzych",
+    "description": "Trzeci największy zamek w Polsce, położony na malowniczej skale nad Pełcznicą.",
+    "rating": 4.7,
+    "url": "https://ksiaz.walbrzych.pl"
+  },
+  {
+    "name": "Łazienki Królewskie",
+    "location": "ul. Agrykola 1, 00-460 Warszawa",
+    "country": "Poland",
+    "city": "Warszawa",
+    "description": "Zespół pałacowo-parkowy z Pałacem na Wyspie i pomnikiem Chopina.",
+    "rating": 4.9,
+    "url": "https://www.lazienki-krolewskie.pl"
+  },
+  {
+    "name": "Białowieski Park Narodowy",
+    "location": "ul. Pałacowa 11, 17-230 Białowieża",
+    "country": "Poland",
+    "city": "Białowieża",
+    "description": "Ostatni las pierwotny w Europie, dom żubra.",
+    "rating": 4.9,
+    "url": "https://bpn.com.pl"
+  },
+  {
+    "name": "Krzywa Wieża w Toruniu",
+    "location": "ul. Pod Krzywą Wieżą 1, 87-100 Toruń",
+    "country": "Poland",
+    "city": "Toruń",
+    "description": "Słynna odchylona średniowieczna wieża miejska.",
+    "rating": 4.5,
+    "url": "https://visittorun.com"
+  },
+  {
+    "name": "Muzeum Narodowe w Warszawie",
+    "location": "Al. Jerozolimskie 3, 00-495 Warszawa",
+    "country": "Poland",
+    "city": "Warszawa",
+    "description": "Największe muzeum sztuki w Polsce.",
+    "rating": 4.7,
+    "url": "https://www.mnw.art.pl"
+  },
+  {
+    "name": "Słowiński Park Narodowy",
+    "location": "ul. Bohaterów Warszawy 1, 76-214 Smołdzino",
+    "country": "Poland",
+    "city": "Smołdzino",
+    "description": "Ruchome wydmy nad Bałtykiem.",
+    "rating": 4.9,
+    "url": "https://slowinskipn.pl"
+  },
+  {
+    "name": "Giewont",
+    "location": "Tatry Zachodnie, 34-500 Zakopane",
+    "country": "Poland",
+    "city": "Zakopane",
+    "description": "Symbol Tatr z charakterystycznym krzyżem na szczycie.",
+    "rating": 4.8,
+    "url": "https://tpn.pl"
+  },  
+  {
+    "name": "Plaża w Sopocie",
+    "location": "Plac Zdrojowy 2, 81-720 Sopot",
+    "country": "Poland",
+    "city": "Sopot",
+    "description": "Jedna z najpopularniejszych plaż nad Bałtykiem.",
+    "rating": 4.6,
+    "url": "https://visit.sopot.pl"
+  },
+  {
+    "name": "Molo w Sopocie",
+    "location": "Plac Zdrojowy 2, 81-720 Sopot",
+    "country": "Poland",
+    "city": "Sopot",
+    "description": "Najdłuższe drewniane molo w Europie.",
+    "rating": 4.7,
+    "url": "https://visit.sopot.pl"
+  },
+  {
+    "name": "Zamek w Niedzicy",
+    "location": "ul. Zamkowa 2, 34-441 Niedzica",
+    "country": "Poland",
+    "city": "Niedzica",
+    "description": "XIV-wieczny zamek nad Dunajcem, znany z legend o skarbie Inków.",
+    "rating": 4.7,
+    "url": "https://zamekniedzica.pl"
+  },
+  {
+    "name": "Pałac w Wilanowie",
+    "location": "ul. Stanisława Kostki Potockiego 10/16, 02-958 Warszawa",
+    "country": "Poland",
+    "city": "Warszawa",
+    "description": "Barokowa rezydencja króla Jana III Sobieskiego.",
+    "rating": 4.8,
+    "url": "https://www.wilanow-palac.pl"
+  },
+  {
+    "name": "Muzeum Śląskie",
+    "location": "ul. Tadeusza Dobrowolskiego 1, 40-205 Katowice",
+    "country": "Poland",
+    "city": "Katowice",
+    "description": "Nowoczesne muzeum sztuki i historii Górnego Śląska, częściowo pod ziemią.",
+    "rating": 4.7,
+    "url": "https://muzeumslaskie.pl"
+  },
+  {
+    "name": "Nikiszowiec",
+    "location": "ul. Rymarska 4, 40-861 Katowice",
+    "country": "Poland",
+    "city": "Katowice",
+    "description": "Zabytkowe osiedle górnicze z cegły, unikatowe w skali Europy.",
+    "rating": 4.8,
+    "url": "https://katowice.eu"
+  },
+  {
+    "name": "Dom Urodzenia Fryderyka Chopina",
+    "location": "ul. Okólna 2, 05-092 Żelazowa Wola",
+    "country": "Poland",
+    "city": "Żelazowa Wola",
+    "description": "Dworek poświęcony życiu i twórczości Chopina, otoczony parkiem.",
+    "rating": 4.8,
+    "url": "https://muzeum.nifc.pl"
+  },
+  {
+    "name": "Góra Żar",
+    "location": "Międzybrodzie Żywieckie 32-123",
+    "country": "Poland",
+    "city": "Międzybrodzie Żywieckie",
+    "description": "Popularny szczyt z kolejką, widokami i zbiornikiem elektrowni szczytowo-pompowej.",
+    "rating": 4.6,
+    "url": "https://gora-zar.pl"
+  },
+  {
+    "name": "Muzeum Wsi Kieleckiej – Park Etnograficzny w Tokarni",
+    "location": "Tokarnia 303, 26-060 Tokarnia",
+    "country": "Poland",
+    "city": "Tokarnia",
+    "description": "Skansen prezentujący architekturę i kulturę Kielecczyzny.",
+    "rating": 4.8,
+    "url": "https://mwk.com.pl"
+  },
+  {
+    "name": "Ogród Botaniczny Uniwersytetu Wrocławskiego",
+    "location": "ul. Henryka Sienkiewicza 23, 50-335 Wrocław",
+    "country": "Poland",
+    "city": "Wrocław",
+    "description": "Jeden z najstarszych ogrodów botanicznych w Polsce.",
+    "rating": 4.7,
+    "url": "https://obuwr.pl"
+  },
+  {
+    "name": "Muzeum Tatrzańskie",
+    "location": "ul. Krupówki 10, 34-500 Zakopane",
+    "country": "Poland",
+    "city": "Zakopane",
+    "description": "Najważniejsze muzeum kultury i historii Podhala.",
+    "rating": 4.6,
+    "url": "https://muzeumtatrzanskie.pl"
+  },
+  {
+    "name": "Sanktuarium św. Kingi w Starym Sączu",
+    "location": "Plac świętej Kingi 1, 33-340 Stary Sącz",
+    "country": "Poland",
+    "city": "Stary Sącz",
+    "description": "Klasztor klarysek z XIII w. i miejsce ważne dla historii regionu.",
+    "rating": 4.8,
+    "url": "https://starysacz.pl"
+  },
+  {
+    "name": "Zamek w Pieskowej Skale",
+    "location": "Sułoszowa 5, 32-045 Sułoszowa",
+    "country": "Poland",
+    "city": "Pieskowa Skała",
+    "description": "Renesansowy zamek na terenie Ojcowskiego Parku Narodowego.",
+    "rating": 4.7,
+    "url": "https://pieskowaskala.eu"
+  },
+  {
+    "name": "Maczuga Herkulesa",
+    "location": "Pieskowa Skała 32-045 Sułoszowa",
+    "country": "Poland",
+    "city": "Sułoszowa",
+    "description": "Ikoniczna wapienna skała o charakterystycznym kształcie.",
+    "rating": 4.7,
+    "url": "https://ojcow.pl"
+  },
+  {
+    "name": "Muzeum Historyczne Miasta Krakowa – Podziemia Rynku",
+    "location": "Rynek Główny 1, 31-042 Kraków",
+    "country": "Poland",
+    "city": "Kraków",
+    "description": "Interaktywna ekspozycja archeologiczna pod płytą rynku.",
+    "rating": 4.8,
+    "url": "https://muzeumkrakowa.pl"
+  },
+  {
+    "name": "Ojcowski Park Narodowy",
+    "location": "ul. Ojcowska 10, 32-047 Ojców",
+    "country": "Poland",
+    "city": "Ojców",
+    "description": "Najmniejszy park narodowy w Polsce z wapiennymi dolinami i zamkami.",
+    "rating": 4.9,
+    "url": "https://ojcowskiparknarodowy.pl"
+  },
+  {
+    "name": "Zamek w Olsztynie",
+    "location": "ul. Zamkowa 1, 42-256 Olsztyn",
+    "country": "Poland",
+    "city": "Olsztyn (k. Częstochowy)",
+    "description": "Ruiny zamku na Szlaku Orlich Gniazd.",
+    "rating": 4.7,
+    "url": "https://gminaolsztyn.pl"
+  },
+  {
+    "name": "Zamek Ogrodzieniec",
+    "location": "ul. Kościuszki 66, 42-440 Podzamcze",
+    "country": "Poland",
+    "city": "Ogrodzieniec",
+    "description": "Największa warownia Jury Krakowsko-Częstochowskiej.",
+    "rating": 4.8,
+    "url": "https://zamek-ogrodzieniec.pl"
+  },
+  {
+    "name": "Planetarium Śląskie",
+    "location": "al. Planetarium 4, 41-500 Chorzów",
+    "country": "Poland",
+    "city": "Chorzów",
+    "description": "Największe planetarium w Polsce po modernizacji.",
+    "rating": 4.9,
+    "url": "https://planetarium.edu.pl"
+  },
+  {
+    "name": "Park Śląski",
+    "location": "al. Różana 2, 41-501 Chorzów",
+    "country": "Poland",
+    "city": "Chorzów",
+    "description": "Jeden z największych parków miejskich w Europie.",
+    "rating": 4.7,
+    "url": "https://parkslaski.pl"
+  },
+  {
+    "name": "Zamek Czocha",
+    "location": "Sucha 1, 59-814 Leśna",
+    "country": "Poland",
+    "city": "Leśna",
+    "description": "Zamek o tajemniczej historii, znany z filmów i legend.",
+    "rating": 4.7,
+    "url": "https://zamekczocha.com"
+  },
+  {
+    "name": "Twierdza Srebrna Góra",
+    "location": "ul. Letnia 10, 57-215 Srebrna Góra",
+    "country": "Poland",
+    "city": "Srebrna Góra",
+    "description": "Największa twierdza górska w Europie.",
+    "rating": 4.8,
+    "url": "https://forty.pl"
+  },
+  {
+    "name": "Hydropolis",
+    "location": "ul. Na Grobli 17, 50-421 Wrocław",
+    "country": "Poland",
+    "city": "Wrocław",
+    "description": "Centrum wiedzy o wodzie z interaktywnymi wystawami.",
+    "rating": 4.8,
+    "url": "https://hydropolis.pl"
+  },
+  {
+    "name": "ZOO Wrocław – Afrykarium",
+    "location": "ul. Wróblewskiego 1-5, 51-618 Wrocław",
+    "country": "Poland",
+    "city": "Wrocław",
+    "description": "Unikatowy oceanarium tematyczne poświęcone Afryce.",
+    "rating": 4.9,
+    "url": "https://zoo.wroclaw.pl"
+  },
+  {
+    "name": "Kaszubski Park Miniatur",
+    "location": "ul. Kartuska 30, 83-300 Mirachowo",
+    "country": "Poland",
+    "city": "Mirachowo",
+    "description": "Makiety słynnych budowli świata.",
+    "rating": 4.5,
+    "url": "https://park-miniatur-mirachowo.pl"
+  },
+  {
+    "name": "Zamek w Łańcucie",
+    "location": "ul. Zamkowa 1, 37-100 Łańcut",
+    "country": "Poland",
+    "city": "Łańcut",
+    "description": "Rezydencja Lubomirskich, słynąca z wnętrz i powozowni.",
+    "rating": 4.8,
+    "url": "https://zamek-lancut.pl"
+  },
+  {
+    "name": "Bieszczadzka Kolejka Leśna",
+    "location": "Majdan 17, 38-607 Cisna",
+    "country": "Poland",
+    "city": "Cisna",
+    "description": "Kultowa wąskotorówka w Bieszczadach.",
+    "rating": 4.7,
+    "url": "https://kolejka.bieszczady.pl"
+  },
+  {
+    "name": "Kraina Rumianku",
+    "location": "Hołowno 39A, 21-200 Parczew",
+    "country": "Poland",
+    "city": "Hołowno",
+    "description": "Ekomuzeum na Polesiu.",
+    "rating": 4.6,
+    "url": "https://krainarumianku.pl"
+  },
+  {
+    "name": "Pałac Kultury i Nauki",
+    "location": "Plac Defilad 1, 00-901 Warszawa",
+    "country": "Poland",
+    "city": "Warszawa",
+    "description": "Ikoniczny wieżowiec z tarasem widokowym.",
+    "rating": 4.5,
+    "url": "https://pkin.pl"
+  },
+  {
+    "name": "Muzeum POLIN",
+    "location": "ul. Mordechaja Anielewicza 6, 00-157 Warszawa",
+    "country": "Poland",
+    "city": "Warszawa",
+    "description": "Muzeum historii Żydów polskich.",
+    "rating": 4.8,
+    "url": "https://polin.pl"
+  }
+]

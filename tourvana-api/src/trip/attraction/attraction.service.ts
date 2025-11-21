@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { loggerFor } from 'node_modules/openai/internal/utils/log';
 import OpenAI from 'openai';
 import { Attraction } from 'src/entities/trip/attraction.entity';
-import { DeepPartial, Repository } from 'typeorm';
+import { DeepPartial, Like, Repository } from 'typeorm';
 import { AddAttratcionDto } from '../dtos/attraction/addAttraction.dto';
 import { strict } from 'assert';
 
@@ -31,18 +31,13 @@ export class AttractionService {
         return req
     }
 
-    async getAttractionsFor(city: string, country?: string, ) {
+    async getAttractionsFor(destination: string) {
 
         try {
             var attractions: Attraction[];
-            if(country) {
-                attractions = await this.attractionRepo.find({where: {city: city, country: country}})
-            }else {
-                attractions = await this.attractionRepo.find({where: {city: city}})
-            }
-
+            attractions = await this.attractionRepo.find({ where: [{ location: Like(`%${destination}%`) }, { city: Like(`%${destination}%`) }, { country: Like(`%${destination}%`) }] })
             if(attractions.length == 0) {
-                return this.seedAttractions(country!, city)
+                return this.seedAttractions(destination)
             }else {
                 return await attractions
             }
@@ -52,7 +47,7 @@ export class AttractionService {
         }
     }
 
-    async seedAttractions(country: string, city: string) {
+    async seedAttractions(country?: string, city?: string) {
         try {
             const res = await this.openAI.chat.completions.create({
                 model: 'gpt-4o-mini',

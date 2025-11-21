@@ -7,5 +7,6 @@ export interface HotelModel {
         city?: string;
         description?: string;
         rating?: number;
+        imageUrl?: string;
         url: string;
 }

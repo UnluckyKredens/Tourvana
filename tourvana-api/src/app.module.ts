@@ -9,6 +9,7 @@ import { AttractionModule } from './trip/attraction/attraction.module';
 import { HotelModule } from './trip/hotel/hotel.module';
 import { JwtModule } from '@nestjs/jwt';
 import { UserModule } from './user/user.module';
+import { SeedModule } from './seed/seed.module';
 
 @Module({
   imports: [
@@ -42,7 +43,8 @@ import { UserModule } from './user/user.module';
     TripModule,
     AttractionModule,
     HotelModule,
-    UserModule
+    UserModule,
+    SeedModule
 
 ],
   controllers: [AppController],

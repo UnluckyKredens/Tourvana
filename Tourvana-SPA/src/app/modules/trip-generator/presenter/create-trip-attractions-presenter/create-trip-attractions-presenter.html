@@ -1,0 +1,16 @@
+<div class="container">
+  @for (attraction of attractionList; track attraction.attractionId; let i = $index ) {
+  @if(i < 10) {
+    <div class="attraction">
+    <div class="attraction__details">
+      <a class="attraction__details--title">{{attraction.name}}</a>
+      <p class="attraction__details--price">{{attraction.location}}</p>
+      <a class="attraction__details--location" href="{{attraction.url}}" target="_blank">Więcej informacji</a>
+    </div>
+    <div class="attraction__options">
+      <mat-checkbox (change)="checkAttraction($event, attraction)" ></mat-checkbox>
+    </div>
+</div>
+}
+}
+</div>

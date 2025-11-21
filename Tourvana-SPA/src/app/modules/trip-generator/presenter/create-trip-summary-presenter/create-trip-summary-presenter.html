@@ -1,0 +1,23 @@
+<form class="container" [formGroup]="summary">
+    <mat-form-field appearance="outline">
+    <mat-label>Nazwa</mat-label>
+    <input matInput placeholder="" formControlName="name">
+  </mat-form-field>
+  <div>
+    <h2>Podsumowanie:</h2>
+    <h3>Skąd: {{trip?.from}} - Do: {{trip?.destination}}</h3>
+        <h2>Termin</h2>
+    <h3>{{trip?.startDate | date: 'dd-MM-yyyy'}} - {{trip?.endDate | date: 'dd-mm-yyyy'}}</h3>
+    <h2>Budget: {{trip?.budget}} PLN</h2>
+    <h2>Transport: {{trip?.transport}}</h2>
+    @if(trip?.hotel) {
+    <h2>Hotel: {{trip?.hotel?.name}}, {{trip?.hotel?.location}}</h2>
+    }
+    @if(trip?.attractions?.length! > 0) {
+    <h2>Atrakcje:</h2>
+    @for(attraction of trip?.attractions; track attraction.attractionId) {
+      <p>{{attraction.name}}</p>
+    }
+    }
+  </div>
+</form>

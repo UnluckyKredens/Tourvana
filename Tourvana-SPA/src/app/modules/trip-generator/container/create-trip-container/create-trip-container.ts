@@ -1,9 +1,14 @@
+import { AuthService } from './../../../auth/services/auth.service';
 import { L } from '@angular/cdk/keycodes';
-import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, inject, Input, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TripService } from '../../services/trip-service';
-import { StepService } from '../../services/step-service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { TripModel } from '../../../../shared/model/trip.model';
+import { BehaviorSubject } from 'rxjs';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { tick } from '@angular/core/testing';
+import { formatCurrency } from '@angular/common';
 
 @Component({
   selector: 'app-create-trip-container',
@@ -13,27 +18,48 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class CreateTripContainer {
 
-  constructor(private router: Router, private tripService: TripService, private stepService: StepService ) {  }
-    
-    stepRoutes = ['data', 'hotel', 'attractions', 'summary']
-    private snackbar = inject(MatSnackBar);
+  constructor(private tripService: TripService, private router: Router) {
+    tripService.trip$.subscribe(t => {
+      this.trip = t
+    })
+  }
 
-    waitingForValidation = false;
-
+  @Output() tripForm = new FormGroup({})
+  @Output() summaryForm = new FormGroup({})
+  trip: Partial<TripModel> | undefined
+  summary: Partial<TripModel> | undefined
+  saveTick: number = 0
 
     ngOnInit(): void {
 
+  }
+
+  onTripFormReady(form: FormGroup) {
+    this.tripForm = form
     }
 
-    nextStep(): void {
-      const step = this.stepRoutes.indexOf(window.location.pathname.split('/')[3]) 
-      //TODO: VALIDACJA
-      console.log(step)
-                this.router.navigate(['/trip/generator/' + this.stepRoutes[step+1]])
-    }
+  onSummaryFormReady(form: FormGroup) {
+    this.summaryForm = form
+  }
 
-    prevStep(): void {
-      const step = this.stepRoutes.indexOf(window.location.pathname.split('/')[3]) 
-      this.router.navigate(['/trip/generator/' + this.stepRoutes[step-1]])
-      }
-    }
+  next() {
+    this.saveTick++
+  }
+
+  back() {
+    this.saveTick--
+  }
+
+  saveTrip(summaryForm: FormGroup) {
+    var body: Partial<TripModel> = {...this.trip, name: summaryForm.value.name}
+    this.tripService.saveTrip(body).subscribe({next: (res: any) => {
+      this.router.navigate([`/trips/details/${res.id}`])
+    }})
+  }
+
+  clearData() {
+    this.tripService.clearData();
+    this.saveTick--;
+  }
+}
+

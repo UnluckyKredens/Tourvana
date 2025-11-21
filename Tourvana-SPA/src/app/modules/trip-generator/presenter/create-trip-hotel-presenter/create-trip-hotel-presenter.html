@@ -1,0 +1,23 @@
+<div class="container">
+  @for (hotel of hotelList; track hotel.hotelId; let i = $index ) {
+  @if(i < 10) {
+    <div class="hotel">
+      @if(hotel.imageUrl!.length > 10) {
+    <img class="hotel__img" (error)="onPhotoError($event)" [src]="hotel.imageUrl">
+      } @else {
+            <img class="hotel__img" src="/images/Icons/no_photo.png">
+      }
+    <div class="hotel__details">
+      <a class="hotel__details--title">{{hotel.name}}</a>
+      <p class="hotel__details--price">{{hotel.location}}</p>
+      <a class="hotel__details--location" href="{{hotel.url}}" target="_blank">Więcej informacji</a>
+    </div>
+    <div class="hotel__options">
+      <mat-checkbox [checked]="checkedHotelId == hotel.hotelId" (change)='checkHotel($event, hotel.hotelId)'></mat-checkbox>
+    </div>
+  </div>
+}
+  }
+  <mat-checkbox [checked]="checkedHotelId == 'none'" (change)="checkHotel($event, 'none')">Nie chcę wybierać hotelu</mat-checkbox>
+
+</div>

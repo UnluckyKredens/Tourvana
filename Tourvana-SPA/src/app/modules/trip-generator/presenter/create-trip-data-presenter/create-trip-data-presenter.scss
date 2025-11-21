@@ -1,0 +1,36 @@
+.data {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__field {
+    width: 80%;
+
+    mat-button-toggle {
+      width: 100%;
+    }
+  }
+  &__picker--info {
+    display: none;
+  }
+}
+
+.required {
+  border: 1px solid red;
+}
+
+@media (min-width: 1280px) {
+
+  .data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__field {
+      margin: 1%;
+    }
+    &__picker--info {
+      display:inline;
+    }
+  }
+}

@@ -17,7 +17,6 @@ export class MyTripsService {
   }
 
   getOneTrip(tripId: string): Observable<TripModel> {
-    console.log(apiEndpoint.trip.getTripById + tripId)
     return this.http.get<TripModel>(apiEndpoint.trip.getTripById + tripId)
   }
 }

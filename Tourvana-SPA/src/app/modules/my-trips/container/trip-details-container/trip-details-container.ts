@@ -26,10 +26,12 @@ export class TripDetailsContainer {
   getTripDetails() {
     if(this.tripId) {
     this.myTripsService.getOneTrip(this.tripId).subscribe(trip => {
-      this.trip = trip
-
       console.log(trip)
+      this.trip = trip
     })
     }
+  }
+
+  fixDate(date: Date) {
   }
 }

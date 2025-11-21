@@ -1,0 +1,42 @@
+<form class="data" [formGroup]="tripForm">
+  <h2>Podaj szczegóły podróży</h2>
+  <mat-form-field appearance="outline" class="data__field">
+    <mat-label>Skąd jedziesz?</mat-label>
+    <input matInput formControlName="from" required>
+  </mat-form-field>
+    <mat-form-field appearance="outline" class="data__field">
+    <mat-label>Dokąd jedziesz?</mat-label>
+    <input matInput value="{{urlDestination || ''}}" formControlName="destination" [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      @for (city of filteredCities$ | async; track city.id) {
+        <mat-option [value]="city.name">{{city.name}}</mat-option>
+      }
+    </mat-autocomplete>
+  </mat-form-field>
+  <mat-form-field (click)="picker.open()" appearance="outline" class="data__field">
+    <mat-label>Kiedy jedziesz?</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="Od" formControlName="startDate">
+      <input matEndDate  placeholder="Do" formControlName="endDate">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      @if(this.tripForm.controls['startDate'].invalid || this.tripForm.controls['endDate'].invalid ) {
+        <mat-hint color="red">Daty się nie zgadzają</mat-hint>
+      }
+    </mat-date-range-input>
+
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="data__field">
+    <mat-label>Budget</mat-label>
+    <input matInput value="" type="number" min="0" step="0.01" formControlName="budget">
+    <span matTextSuffix>&nbsp;PLN &nbsp;</span>
+  </mat-form-field>
+  <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color" value="" [ngClass]="{'required': tripForm.controls['transport'].invalid}" class="data__field" formControlName="transport">
+    <mat-button-toggle value="bus"><mat-icon>directions_bus</mat-icon> <span class="data__picker--info">Autobusem</span></mat-button-toggle>
+    <mat-button-toggle value="car"><mat-icon>directions_car</mat-icon> <span class="data__picker--info">Samochodem</span></mat-button-toggle>
+    <mat-button-toggle value="train"><mat-icon>directions_railway</mat-icon> <span class="data__picker--info">Pociągiem</span></mat-button-toggle>
+    <mat-button-toggle value="plane"><mat-icon>flight</mat-icon> <span class="data__picker--info">Samolotem</span></mat-button-toggle>
+    <mat-button-toggle value="other"><mat-icon>more_horiz</mat-icon> <span class="data__picker--info">Nie chce podać</span></mat-button-toggle>
+  </mat-button-toggle-group>
+</form>
+

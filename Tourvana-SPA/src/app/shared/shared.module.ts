@@ -68,7 +68,6 @@ import { ErrorPresenter } from './presenters/error-presenter/error-presenter';
       MatBadgeModule,
       FormsModule,
       MatButtonToggleModule,
-      // ErrorPresenter
     ],
     exports: [
       CommonModule,

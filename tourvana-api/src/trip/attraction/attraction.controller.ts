@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Post, Query } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post, Query } from '@nestjs/common';
 import { AttractionService } from './attraction.service';
 import { Attraction } from 'src/entities/trip/attraction.entity';
 
@@ -18,8 +18,8 @@ export class AttractionController {
         return this.attractionService.addAttractions(attractions)
     }
 
-    @Get('for/')
-    getAttractionsFor(@Query('city') city: string, @Query('country') country?: string) {
-        return this.attractionService.getAttractionsFor(city, country)
+    @Get('destination/:destination')
+    getAttractionsFor(@Param('destination') destination: string) {
+        return this.attractionService.getAttractionsFor(destination)
     }
 }

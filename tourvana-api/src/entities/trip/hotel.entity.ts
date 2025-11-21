@@ -9,7 +9,7 @@ export class Hotel {
     @Column({type: 'text'})
     name: string;
 
-    @Column({type: 'text'})
+    @Column({type: 'varchar'})
     location: string;
 
     @Column({type: 'text'})
@@ -24,7 +24,10 @@ export class Hotel {
     @Column({type: 'decimal', precision: 3, scale: 2, nullable: true})
     rating?: number;
 
-    @Column({type: 'text', nullable: true})
+    @Column({type:'text', nullable: true})
+    imageUrl?: string;
+
+    @Column({type: 'varchar', nullable: true})
     url?: string;
 
     @ManyToOne(() => Trip, trip => trip.hotel, {onDelete: 'CASCADE'})

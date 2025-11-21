@@ -1,18 +1,32 @@
 <app-navigation-bar></app-navigation-bar>
-<div class="create">
-  <router-outlet></router-outlet>
-  <div class="create__options">
-    <ol class="stepper">
-        <li class="stepper__item" [routerLink]="['/trip/generator/data']" isActive="false"  routerLinkActive="stepper__item--active" [skipLocationChange]="true"   (click)="$event.stopImmediatePropagation()"><h3>1</h3></li>
-        <li class="stepper__item" [routerLink]="['/trip/generator/hotel']" routerLinkActive="stepper__item--active"><h3>2</h3></li>
-        <li class="stepper__item" [routerLink]="['/trip/generator/attractions']" routerLinkActive="stepper__item--active"><h3>3</h3></li>
-        <li class="stepper__item last" routerLink="['/trip/generator/summary']" routerLinkActive="stepper__item--active"><h3>4</h3></li>
-    </ol>
-    <div class="create__options--actions">
-    <button mat-raised-button (click)="prevStep()">Wstecz</button>
-    <button mat-raised-button color="primary" (click)="nextStep()">Dalej</button>
-
+<mat-stepper #stepper [linear]="true" headerPosition="bottom" class="stepper">
+  <mat-step [stepControl]="tripForm" class="stepper__step" label="Szczegóły">
+    <app-create-trip-data-presenter (formReady)="onTripFormReady($event)" [saveRequestTick]="saveTick">
+    </app-create-trip-data-presenter>
+    <div class="stepper__step--options">
+      <button mat-raised-button color="primary" matStepperNext (click)="next()">Dalej</button>
     </div>
 
-  </div>
-  </div>
+  </mat-step>
+  <mat-step label="Hotel">
+    <app-create-trip-hotel-presenter [saveRequestTick]="saveTick"></app-create-trip-hotel-presenter>
+    <div class="stepper__step--options">
+      <button mat-raised-button matStepperPrevious (click)="clearData()">Wstecz</button>
+      <button mat-raised-button color="primary" matStepperNext (click)="next()">Dalej</button>
+    </div>
+  </mat-step>
+  <mat-step label="Atrakcje" disabled>
+    <app-create-trip-attractions-presenter [saveRequestTick]="saveTick" ></app-create-trip-attractions-presenter>
+    <div class="stepper__step--options">
+      <button mat-raised-button matStepperPrevious (click)="back()">Wstecz</button>
+      <button mat-raised-button color="primary" matStepperNext (click)="next()">Dalej</button>
+    </div>
+  </mat-step>
+  <mat-step label="Podsumowanie" [stepControl]="summaryForm">
+    <app-create-trip-summary-presenter (summaryReady)="onSummaryFormReady($event)" [saveRequestTick]="saveTick"></app-create-trip-summary-presenter>
+    <div class="stepper__step--options">
+      <button mat-raised-button color="primary" (click)="saveTrip(summaryForm)">Zapisz</button>
+      <button mat-raised-button matStepperPrevious (click)="back()">Wstecz</button>
+    </div>
+  </mat-step>
+</mat-stepper>

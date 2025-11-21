@@ -17,6 +17,6 @@ export class LandingPageHeaderPresenterComponent {
   destination: string = ""
 
   search(): void {
-   this.router.navigate(['/trip/generator/data/', this.destination])
+   this.router.navigate(['/generator', this.destination])
   }
  }
