@@ -6,9 +6,7 @@ import { Repository } from 'typeorm';
 import { LoginDto } from './dtos/login.dto';
 import { RegisterDto } from './dtos/register.dto';
 import  * as argon2 from 'argon2';
-import { BadRequestError } from 'openai';
-import { ApiBadRequestResponse } from '@nestjs/swagger';
-import { JwtGuard } from './jwt.guard';
+
 
 @Injectable()
 export class AuthService {

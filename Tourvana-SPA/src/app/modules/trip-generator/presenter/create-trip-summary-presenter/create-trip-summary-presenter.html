@@ -7,7 +7,7 @@
     <h2>Podsumowanie:</h2>
     <h3>Skąd: {{trip?.from}} - Do: {{trip?.destination}}</h3>
         <h2>Termin</h2>
-    <h3>{{trip?.startDate | date: 'dd-MM-yyyy'}} - {{trip?.endDate | date: 'dd-mm-yyyy'}}</h3>
+    <h3>{{trip?.startDate | date: 'dd.MM.yyy'}} - {{trip?.endDate | date: 'dd.MM.yyy'}}</h3>
     <h2>Budget: {{trip?.budget}} PLN</h2>
     <h2>Transport: {{trip?.transport}}</h2>
     @if(trip?.hotel) {

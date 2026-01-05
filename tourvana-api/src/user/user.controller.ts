@@ -18,4 +18,9 @@ export class UserController {
     getUserTrips(@Req() req) {
         return this.userService.getUserTrips(req.user.userId)
     }
+
+    @Get('activities')
+    getRecentAcivities(@Req() req) {
+        return this.userService.getRecentAcivities(req.user.userId)
+    }
 }
